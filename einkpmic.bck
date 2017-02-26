@@ -12,4 +12,8 @@ $CMP +3V15(EINK)
 K POWER, PWR
 $ENDCMP
 #
+$CMP +VSOURCE
+K POWER, PWR
+$ENDCMP
+#
 #End Doc Library
