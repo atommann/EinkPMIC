@@ -24,4 +24,8 @@ $CMP -1V25(EINK)
 K POWER, PWR
 $ENDCMP
 #
+$CMP -20V(EINK)
+K POWER, PWR
+$ENDCMP
+#
 #End Doc Library
