@@ -1606,4 +1606,6 @@ Text Label 6600 4650 0    60   ~ 0
 PMICB_EPAD
 Text Label 3525 4125 0    60   ~ 0
 PMICB_EPAD
+Text Label 4925 6250 1    60   ~ 0
+PMICB_EPAD
 $EndSCHEMATC
