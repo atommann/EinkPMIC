@@ -1073,7 +1073,7 @@ Connection ~ 1050 4050
 Wire Wire Line
 	1050 3750 1050 3800
 Wire Wire Line
-	3700 4050 1050 4050
+	1050 4050 4075 4050
 Wire Wire Line
 	3700 5000 3700 5050
 Wire Wire Line
@@ -1117,8 +1117,6 @@ Wire Wire Line
 Wire Wire Line
 	1525 4225 1525 4050
 Connection ~ 1525 4050
-Wire Wire Line
-	3725 4050 4075 4050
 Wire Wire Line
 	2725 4725 4075 4725
 Wire Wire Line
@@ -1605,5 +1603,9 @@ PMICB_VPOS
 Text Label 5550 5400 0    60   ~ 0
 PMICB_VSOURCE
 Text Label 6600 4650 0    60   ~ 0
+PMICB_EPAD
+Text Label 3525 4125 0    60   ~ 0
+PMICB_EPAD
+Text Label 4925 6250 1    60   ~ 0
 PMICB_EPAD
 $EndSCHEMATC
