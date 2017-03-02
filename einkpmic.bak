@@ -1674,7 +1674,7 @@ U 1 1 58B4A250
 P 1350 2775
 F 0 "C1" H 1360 2845 50  0000 L CNN
 F 1 "10uF/25V" H 1360 2695 50  0000 L CNN
-F 2 "Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_HandSoldering" H 1350 2775 50  0000 C CNN
+F 2 "Capacitors_Tantalum_SMD:Tantalum_Case-B_EIA-3528-21_Hand" H 1350 2775 50  0000 C CNN
 F 3 "" H 1350 2775 50  0000 C CNN
 	1    1350 2775
 	1    0    0    -1  
