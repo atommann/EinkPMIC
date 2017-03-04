@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 4006)
+    (start_pass_no 4021)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -49,6 +49,9 @@
   (via 
     "Via[0-1]_600:400_um-POWER" "Via[0-1]_600:400_um" POWER
   )
+  (via 
+    "Via[0-1]_600:400_um-vsource" "Via[0-1]_600:400_um" vsource
+  )
   (via_rule
     default "Via[0-1]_600:400_um"
   )
@@ -57,6 +60,9 @@
   )
   (via_rule
     POWER "Via[0-1]_600:400_um-POWER"
+  )
+  (via_rule
+    vsource "Via[0-1]_600:400_um-vsource"
   )
   (class default
     (clearance_class default)
@@ -69,13 +75,12 @@
     )
   )
   (class "kicad_default"
-    +VSOURCE GND "Net-(C2-Pad1)" "/PMICB_VPOS" +3V15 "Net-(C25-Pad1)" "/PMICB_VSOURCE" "Net-(C28-Pad1)"
-    "Net-(C28-Pad2)" "Net-(C30-Pad1)" "Net-(C31-Pad1)" "Net-(C32-Pad1)" "/PMICB_EPAD" "Net-(C34-Pad1)" "Net-(C34-Pad2)" "Net-(C35-Pad1)"
-    "Net-(C39-Pad1)" "Net-(C42-Pad1)" "Net-(D5-Pad2)" "Net-(D6-Pad2)" "Net-(D8-Pad1)" "Net-(D10-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
-    "Net-(P1-Pad4)" "/E_PMIC_VCOM_CTL" "/PMIC_PGOOD" "/E_PMIC_WAKEUP" "/I2C1_SDA" "/E_PMIC_INT_B" "/I2C1_SCL" "/E_PMIC_PWR0"
-    "Net-(R35-Pad2)" "Net-(R38-Pad1)" "Net-(R41-Pad1)" "Net-(R42-Pad2)" "Net-(R46-Pad1)" "Net-(R50-Pad1)" "Net-(R55-Pad1)" "Net-(R59-Pad2)"
-    "Net-(R63-Pad2)" "Net-(R66-Pad2)" "Net-(R67-Pad2)" "Net-(R253-Pad2)" "Net-(SH35-Pad1)" "Net-(SH37-Pad2)" "Net-(SH38-Pad2)" "Net-(SH39-Pad1)"
-    "Net-(U1-Pad11)" "Net-(U1-Pad13)" "Net-(U1-Pad20)" "Net-(U1-Pad38)" "Net-(U1-Pad39)"
+    GND "Net-(C2-Pad1)" "/PMICB_VPOS" +3V15 "Net-(C25-Pad1)" "Net-(C28-Pad1)" "Net-(C28-Pad2)" "Net-(C30-Pad1)"
+    "Net-(C31-Pad1)" "Net-(C32-Pad1)" "/PMICB_EPAD" "Net-(C34-Pad1)" "Net-(C34-Pad2)" "Net-(C35-Pad1)" "Net-(C39-Pad1)" "Net-(C42-Pad1)"
+    "Net-(D5-Pad2)" "Net-(D6-Pad2)" "Net-(D8-Pad1)" "Net-(D10-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad4)" "/E_PMIC_VCOM_CTL"
+    "/PMIC_PGOOD" "/E_PMIC_WAKEUP" "/I2C1_SDA" "/E_PMIC_INT_B" "/I2C1_SCL" "/E_PMIC_PWR0" "Net-(R35-Pad2)" "Net-(R38-Pad1)"
+    "Net-(R41-Pad1)" "Net-(R42-Pad2)" "Net-(R46-Pad1)" "Net-(R50-Pad1)" "Net-(R55-Pad1)" "Net-(R59-Pad2)" "Net-(R63-Pad2)" "Net-(R66-Pad2)"
+    "Net-(R67-Pad2)" "Net-(U1-Pad11)" "Net-(U1-Pad13)" "Net-(U1-Pad20)" "Net-(U1-Pad38)" "Net-(U1-Pad39)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
@@ -91,6 +96,17 @@
     (via_rule POWER)
     (rule
       (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class vsource
+    +VSOURCE "/PMICB_VSOURCE"
+    (clearance_class vsource)
+    (via_rule vsource)
+    (rule
+      (width 600.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
